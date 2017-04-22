@@ -1,0 +1,11 @@
+.person {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  border-radius: 2px;
+}
+
+.person span{
+  float: right;
+}
