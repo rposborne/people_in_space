@@ -44,15 +44,22 @@ class Landing extends Component {
   render() {
     const { number, people, backgroundUrl, backgroundTitle } = this.state;
     return (
-      <div
-        className="landing"
-        style={{ backgroundImage: `url(${backgroundUrl})` }}
-      >
-        <h2>People in Space</h2>
-        <h1>{number}</h1>
-        <p id="background-title">{backgroundTitle}</p>
+      <div className="landing">
+        <header style={{ backgroundImage: `url(${backgroundUrl})` }}>
+          <h2>People in Space</h2>
+          <h1>{number}</h1>
+          <p id="background-title">Image: {backgroundTitle}</p>
+        </header>
 
         {people.map(person => <Person key={person.name} {...person} />)}
+
+        <footer>
+          <span>® {(new Date()).getFullYear()} a Toy Project by</span>
+          |
+          <a href="https://github.com/rposborne">{"</> rposborne"}</a>
+          |
+          <a href="https://twitter.com/rposborne">@rposborne</a>
+        </footer>
       </div>
     );
   }
